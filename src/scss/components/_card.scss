@@ -1,0 +1,41 @@
+// Card component
+.card {
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-light);
+  overflow: hidden;
+
+  &-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-light);
+    background-color: var(--color-light);
+  }
+
+  &-body {
+    padding: 1rem;
+  }
+
+  &-footer {
+    padding: 1rem;
+    border-top: 1px solid var(--color-light);
+    background-color: var(--color-light);
+  }
+
+  // Variants
+  &-primary {
+    border-color: var(--color-primary);
+    .card-header {
+      background-color: var(--color-primary);
+      color: white;
+    }
+  }
+
+  &-hover {
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+} 

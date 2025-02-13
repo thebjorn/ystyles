@@ -1,0 +1,54 @@
+---
+title: Components
+---
+
+# Components
+
+Our framework provides a set of pre-built components that you can use to build your interfaces quickly and consistently.
+
+## Buttons
+
+Buttons are used to trigger actions or navigate between pages.
+
+```html
+<button class="btn btn-primary">Primary Button</button>
+<button class="btn btn-secondary">Secondary Button</button>
+```
+
+<div class="component-preview">
+  <button class="btn btn-primary">Primary Button</button>
+  <button class="btn btn-secondary">Secondary Button</button>
+</div>
+
+## Cards
+
+Cards are used to group related content and actions.
+
+```html
+<div class="card">
+  <div class="card-header">Card Title</div>
+  <div class="card-body">
+    Card content goes here.
+  </div>
+  <div class="card-footer">Card Footer</div>
+</div>
+```
+
+<div class="component-preview">
+  <div class="card">
+    <div class="card-header">Card Title</div>
+    <div class="card-body">
+      Card content goes here.
+    </div>
+    <div class="card-footer">Card Footer</div>
+  </div>
+</div>
+
+<style lang="scss">
+.component-preview {
+  padding: 2rem;
+  border: 1px solid var(--color-light);
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+</style> 

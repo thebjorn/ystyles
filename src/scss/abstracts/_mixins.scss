@@ -1,0 +1,32 @@
+// Breakpoint mixin
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
+
+// Flex center mixin
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Typography mixins
+@mixin heading-1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+@mixin heading-2 {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+// ... add more mixins as needed 

@@ -1,0 +1,32 @@
+// Margin and padding utilities
+@each $space-key, $space-value in $spacers {
+  // Margin
+  .m-#{$space-key} { margin: $space-value !important; }
+  .mt-#{$space-key} { margin-top: $space-value !important; }
+  .mb-#{$space-key} { margin-bottom: $space-value !important; }
+  .ml-#{$space-key} { margin-left: $space-value !important; }
+  .mr-#{$space-key} { margin-right: $space-value !important; }
+  .mx-#{$space-key} { 
+    margin-left: $space-value !important;
+    margin-right: $space-value !important;
+  }
+  .my-#{$space-key} { 
+    margin-top: $space-value !important;
+    margin-bottom: $space-value !important;
+  }
+
+  // Padding
+  .p-#{$space-key} { padding: $space-value !important; }
+  .pt-#{$space-key} { padding-top: $space-value !important; }
+  .pb-#{$space-key} { padding-bottom: $space-value !important; }
+  .pl-#{$space-key} { padding-left: $space-value !important; }
+  .pr-#{$space-key} { padding-right: $space-value !important; }
+  .px-#{$space-key} { 
+    padding-left: $space-value !important;
+    padding-right: $space-value !important;
+  }
+  .py-#{$space-key} { 
+    padding-top: $space-value !important;
+    padding-bottom: $space-value !important;
+  }
+} 

@@ -1,0 +1,22 @@
+// Import all partials in the correct order
+
+// 1. Variables and configuration
+@import 'variables/index';
+
+// 2. Vendor styles
+@import 'vendors/index';
+
+// 3. Abstracts (mixins and functions)
+@import 'abstracts/index';
+
+// 4. Base styles
+@import 'base/index';
+
+// 5. Components
+@import 'components/index';
+
+// 6. Utilities
+@import 'utilities/index';
+
+// 7. Themes
+@import 'themes/index'; 

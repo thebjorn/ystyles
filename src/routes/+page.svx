@@ -1,0 +1,42 @@
+---
+title: Company CSS Framework
+---
+
+# Company CSS Framework
+
+Welcome to the documentation for our company's CSS framework. This framework provides a comprehensive set of tools and components for building consistent, accessible, and themeable user interfaces.
+
+## Features
+
+- 🎨 Customizable themes with dark mode support
+- 📦 Modern CSS utilities
+- 🎯 Semantic color system
+- 📱 Responsive design utilities
+- ♿ Accessibility-first components
+- 🚀 Easy to get started
+
+## Quick Start
+
+Install the package:
+
+```bash
+npm install @your-company/css-framework
+```
+
+Import the styles:
+
+```scss
+// In your main.scss
+@import '@your-company/css-framework/scss/main';
+```
+
+## Theming
+
+The framework supports multiple themes and color modes. You can switch between themes using the theme switcher in the top right corner of this documentation.
+
+## Next Steps
+
+- Check out the [Installation](/installation) guide
+- Learn about our [Color System](/colors)
+- Explore available [Components](/components)
+- Learn how to [Create Custom Themes](/theme) 

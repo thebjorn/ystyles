@@ -1,0 +1,55 @@
+// Form components
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border: 1px solid var(--color-light);
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(var(--color-primary), 0.25);
+  }
+
+  &:disabled {
+    background-color: var(--color-light);
+    cursor: not-allowed;
+  }
+
+  &.is-invalid {
+    border-color: var(--color-danger);
+  }
+}
+
+.form-text {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--color-secondary);
+}
+
+.invalid-feedback {
+  display: none;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: var(--color-danger);
+
+  .is-invalid ~ & {
+    display: block;
+  }
+} 

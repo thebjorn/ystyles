@@ -1,0 +1,30 @@
+// Grid system
+.grid {
+  display: grid;
+  gap: var(--grid-gap, 1rem);
+}
+
+// Grid columns
+@for $i from 1 through 12 {
+  .grid-cols-#{$i} {
+    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+  }
+}
+
+// Responsive grid columns
+@each $breakpoint, $value in $breakpoints {
+  @include breakpoint($breakpoint) {
+    @for $i from 1 through 12 {
+      .#{$breakpoint}\:grid-cols-#{$i} {
+        grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+      }
+    }
+  }
+}
+
+// Grid gap utilities
+@each $space-key, $space-value in $spacers {
+  .gap-#{$space-key} {
+    gap: $space-value;
+  }
+} 

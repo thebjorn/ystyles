@@ -1,0 +1,66 @@
+---
+title: Color System
+---
+
+# Color System
+
+Our color system is built on a semantic foundation, making it easy to maintain consistent branding across your application while supporting both light and dark modes.
+
+## Color Tokens
+
+The framework provides the following semantic color tokens:
+
+- `--color-primary`: Main brand color
+- `--color-secondary`: Supporting color
+- `--color-success`: Positive actions and status
+- `--color-warning`: Cautionary actions and status
+- `--color-danger`: Destructive actions and errors
+- `--color-info`: Informational elements
+- `--color-light`: Light surfaces
+- `--color-dark`: Dark surfaces
+
+## Usage
+
+```scss
+.my-element {
+  color: var(--color-primary);
+  background-color: var(--color-light);
+}
+```
+
+## Color Scales
+
+Each color in our system comes with a 10-step scale, from 50 (lightest) to 900 (darkest).
+
+<div class="color-grid">
+  {#each ['red', 'blue', 'green'] as color}
+    <div class="color-column">
+      <h3>{color}</h3>
+      {#each [50, 100, 200, 300, 400, 500, 600, 700, 800, 900] as shade}
+        <div 
+          class="color-swatch" 
+          style="background-color: var(--{color}-{shade})"
+        >
+          {shade}
+        </div>
+      {/each}
+    </div>
+  {/each}
+</div>
+
+<style lang="scss">
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.color-swatch {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.25rem;
+  color: white;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+</style> 
