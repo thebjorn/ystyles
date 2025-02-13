@@ -1,0 +1,115 @@
+# PROJECT OVERVIEW
+
+I want to create a css framework for my company.
+The framework should be a collection of css classes that can be used to style the company's website.
+The framework should be written in scss and should be a collection of scss partials.
+It should be possible to install the framework via npm and use it in a project by importing the scss partials.
+It should be possible to use the framework in a svelte project by importing the scss partials.
+It should be possible to create custom themes by overriding the default variables.
+Dark mode and light mode should be supported for every theme.
+The library should expose design tokens for colors, fonts, spacing, etc.
+There should be a documentation site that explains how to use the framework.
+The documentation should be written in mdsvex and should be part of the same project as the framework.
+The documentation should be part of the same project as the framework.
+It should be possible to switch between light and dark mode by using the system's preferred color scheme.
+It should be possible to switch between themes by using a dropdown in the top right corner of the page.
+It should be possible to switch between light and dark mode by using a dropdown in the top right corner of the page.
+
+
+# PROJECT STRUCTURE
+
+The project is a sveltekit project.
+
+- src                     # source code
+    - lib                   # library
+        - components        # components
+        - utils             # utils
+    - scss                # the root of the scss partials
+        - abstracts       # scss mixins and functions
+        - atoms           # scss variables
+        - colors          # color definitions
+          - _red.scss     # shading definitions
+          - _green.scss
+          - _blue.scss
+          - ...
+        - fonts           # font definitions
+          - _sans-serif.scss     # sans-serif font
+          - _serif.scss         # serif font
+          - ...
+        - base            # base styles
+        - components      # component styles
+        - utilities       # utility styles
+        - variables       # design tokens
+        - themes          # themes
+          - _pony.scss     # pony theme (light and dark)
+          - _rainbow.scss  # rainbow theme (light and dark)
+          - _subtle.scss   # subtle theme (light and dark)
+          - _vivid.scss    # vivid theme (light and dark)
+          - ...
+        - vendors         # vendor styles
+        - abstracts       # abstract styles
+    - routes              # the routes of the documentation site
+        - about           # about page
+        - installation    # installation instructions
+        - quickstart      # quickstart page
+        - usage           # usage instructions
+        - variables       # listing and explanation of the design tokens
+        - colors          # listing and explanation of the color system with swatches and examples
+        - typography      # listing and explanation of the typography system with examples
+        - components      # listing and explanation of the component system with examples
+        - theme           # explanation of the theme system with examples
+        - make-theme      # explanation of how to make a new theme
+- docs                    # internal documentation on how to develop this package
+
+
+# TECH STACK
+
+- scss
+- svelte 5
+- sveltekit
+- mdsvex
+- svelte-preprocess
+
+# DOCUMENTATION
+
+# Our .env variables
+.env
+
+
+# CURRENT FILE STRUCTURE
+```shell
+tree -L 4 -a -I "node_modules|.git|__pycache__|.DS_Store|.pytest_cache|.idea|.vscode|.svelte-kit|.turbo|.vercel|coverage"
+```
+.
+|   `-- .cursorrules
+|   `-- .gitignore
+|   `-- .npmrc
+|   `-- eslint.config.js
+|   `-- package.json
+|   `-- pnpm-lock.yaml
+|   `-- README.md
+|   `-- src
+|   |-- app.d.ts
+|   |-- app.html
+|   |-- lib
+|   |   `-- index.ts
+|   `-- routes
+|       `-- +page.svelte
+|-- static
+|   `-- favicon.png
+|-- svelte.config.js
+|-- tsconfig.json
+`-- vite.config.ts
+
+# GITLAB PUSH PROCESS
+
+# IMPORTANT
+
+- use semantic colors for the colors partial
+
+
+# OTHER CONTEXT
+
+# COMMENTS
+- make sure to ALWAYS include comments in your code
+- do not delete existing comments unless you are replacing them with a better comment
