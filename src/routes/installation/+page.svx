@@ -1,0 +1,68 @@
+---
+title: Installation Guide
+---
+
+# Installation
+
+Follow these steps to install and set up the CSS framework in your project.
+
+## NPM Installation
+
+```bash
+npm install @your-company/css-framework
+```
+
+## Basic Setup
+
+1. Import the main SCSS file in your project:
+
+```scss
+// In your main.scss or similar
+@import '@your-company/css-framework/scss/main';
+```
+
+2. If you're using SvelteKit, update your `svelte.config.js`:
+
+```javascript
+import adapter from '@sveltejs/adapter-auto';
+import preprocess from 'svelte-preprocess';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  kit: {
+    adapter: adapter()
+  },
+  preprocess: preprocess({
+    scss: {
+      prependData: '@import "@your-company/css-framework/scss/main";'
+    }
+  })
+};
+
+export default config;
+```
+
+## Theme Configuration
+
+Add the theme switcher component to your layout:
+
+```svelte
+<script>
+  import { ThemeSwitcher } from '@your-company/css-framework';
+</script>
+
+<ThemeSwitcher />
+```
+
+## Custom Theme
+
+Create a custom theme by overriding the default variables:
+
+```scss
+// _custom-theme.scss
+[data-theme="custom"] {
+  --color-primary: #your-color;
+  --color-secondary: #your-color;
+  // ... other variables
+}
+``` 

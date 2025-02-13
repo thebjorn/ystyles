@@ -1,0 +1,57 @@
+// Navigation component
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  &-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &.active {
+      color: var(--color-primary);
+      font-weight: 500;
+    }
+  }
+
+  // Variants
+  &-tabs {
+    border-bottom: 1px solid var(--color-light);
+
+    .nav-link {
+      margin-bottom: -1px;
+      border: 1px solid transparent;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+
+      &.active {
+        border-color: var(--color-light) var(--color-light) var(--background-color);
+      }
+    }
+  }
+
+  &-pills {
+    .nav-link {
+      border-radius: 0.25rem;
+
+      &.active {
+        background-color: var(--color-primary);
+        color: white;
+      }
+    }
+  }
+} 

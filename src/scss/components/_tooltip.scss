@@ -1,0 +1,58 @@
+// Tooltip component
+[data-tooltip] {
+  position: relative;
+  cursor: help;
+
+  &::before,
+  &::after {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+  }
+
+  // Tooltip text
+  &::before {
+    content: attr(data-tooltip);
+    z-index: 2;
+    background-color: var(--color-dark);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    max-width: 250px;
+    width: max-content;
+  }
+
+  // Tooltip arrow
+  &::after {
+    content: '';
+    border: 6px solid transparent;
+    z-index: 1;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // Tooltip positions
+  &[data-tooltip-position="top"] {
+    &::before {
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-6px);
+    }
+
+    &::after {
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-top-color: var(--color-dark);
+    }
+  }
+
+  // Add more positions (bottom, left, right) as needed
+} 

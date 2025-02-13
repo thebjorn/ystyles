@@ -1,0 +1,61 @@
+---
+title: Theming Guide
+---
+
+# Theming System
+
+Our framework includes a powerful theming system that supports both light and dark modes, as well as custom color schemes.
+
+## Available Themes
+
+- Subtle (default)
+- Vivid
+- Rainbow
+- Pony
+
+## Theme Structure
+
+Each theme defines a set of CSS custom properties that control colors, spacing, and other visual attributes:
+
+```scss
+[data-theme="theme-name"] {
+  // Light mode variables
+  --color-primary: #value;
+  --color-secondary: #value;
+  // ... other variables
+
+  // Dark mode overrides
+  &[data-mode="dark"] {
+    --color-primary: #dark-value;
+    --color-secondary: #dark-value;
+    // ... other variables
+  }
+}
+```
+
+## Creating Custom Themes
+
+1. Create a new SCSS file in your project
+2. Define your theme variables
+3. Import your theme file
+4. Add your theme to the theme switcher options
+
+Example custom theme:
+
+```scss
+[data-theme="custom"] {
+  // Light mode
+  --color-primary: #0066cc;
+  --color-secondary: #666666;
+  --background-color: #ffffff;
+  --text-color: #333333;
+
+  // Dark mode
+  &[data-mode="dark"] {
+    --color-primary: #3399ff;
+    --color-secondary: #999999;
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+  }
+}
+``` 
