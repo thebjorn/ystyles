@@ -30,6 +30,7 @@
 
 <style lang="scss">
   .app {
+    font-family: var(--font-family-sans-serif) sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;

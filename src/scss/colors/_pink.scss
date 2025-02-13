@@ -1,0 +1,24 @@
+// Pink color scale
+$pink-50:  #fdf2f8;
+$pink-100: #fce7f3;
+$pink-200: #fbcfe8;
+$pink-300: #f9a8d4;
+$pink-400: #f472b6;
+$pink-500: #ec4899;
+$pink-600: #db2777;
+$pink-700: #be185d;
+$pink-800: #9d174d;
+$pink-900: #831843;
+
+:root {
+  --pink-50:  #{$pink-50};
+  --pink-100: #{$pink-100};
+  --pink-200: #{$pink-200};
+  --pink-300: #{$pink-300};
+  --pink-400: #{$pink-400};
+  --pink-500: #{$pink-500};
+  --pink-600: #{$pink-600};
+  --pink-700: #{$pink-700};
+  --pink-800: #{$pink-800};
+  --pink-900: #{$pink-900};
+} 

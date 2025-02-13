@@ -1,0 +1,46 @@
+---
+title: Customization
+---
+
+# Customization
+
+Our framework is designed to be flexible, allowing you to override default variables, add new themes, and extend existing components.
+
+## SCSS Variables
+
+All design tokens (colors, spacing, typography, etc.) are defined in SCSS variables located in the `variables` directory. You can override these in your own SCSS by importing them and redefining the variables:
+
+```scss
+@import '@your-company/css-framework/scss/variables/index';
+
+// Override example
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$spacing-unit: 0.5rem;
+```
+
+## Creating a New Theme
+
+1. Create a new file under `src/scss/themes/_your-theme.scss`
+2. Define your color tokens for light and dark modes
+3. Import your new theme in the `src/scss/themes/_index.scss` file:
+
+```scss
+@import 'your-theme';
+```
+
+4. Add the theme to the theme switcher if desired.
+
+## Utility Classes
+
+You can create additional utilities to extend functionality. For example, if you need custom animations or shadows, create a new SCSS partial under `utilities`:
+
+```scss
+@import 'animations';
+@import 'shadows';
+```
+
+By splitting concerns into partials, you can keep your code organized and prevent duplication.
+
+## Configuration Options
+
+Refer to our [Installation](/installation) guide for details on how to set up your `svelte.config.js` or your build pipeline to preprocess SCSS. Make sure to prepend or import your overrides early so that they take precedence. 

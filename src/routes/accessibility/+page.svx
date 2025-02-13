@@ -1,0 +1,39 @@
+---
+title: Accessibility
+---
+
+# Accessibility
+
+Our framework is built with accessibility as a core principle. We follow the [WCAG 2.1](https://www.w3.org/WAI/standards-guidelines/wcag/) guidelines to ensure that our components are usable by all.
+
+## Semantic HTML
+
+All components are designed to use semantic HTML elements where appropriate. This ensures screen readers and other assistive technologies can correctly interpret page content.
+
+## Color Contrast
+
+We provide a color palette ensuring enough contrast between text and background colors. You can override these values in your custom theme if you need even higher contrast levels.
+
+## Keyboard Navigation
+
+Most of our components are navigable using keyboard only. When you add interactive elements (buttons, modals, etc.), ensure they have clear focus states and use appropriate focus management.
+
+## ARIA Attributes
+
+When building new components or customizing existing ones, always ensure you add necessary ARIA attributes to enhance clarity for screen readers.
+
+Example usage for a dismissible alert:
+
+```html
+<div 
+  class="alert alert-success alert-dismissible" 
+  role="alert"
+  aria-live="assertive" 
+  aria-atomic="true"
+>
+  <span>Success! Your changes have been saved.</span>
+  <button class="close" aria-label="Close">
+    &times;
+  </button>
+</div>
+``` 

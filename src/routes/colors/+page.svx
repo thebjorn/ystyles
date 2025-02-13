@@ -33,7 +33,7 @@ The framework provides the following semantic color tokens:
 Each color in our system comes with a 10-step scale, from 50 (lightest) to 900 (darkest).
 
 <div class="color-grid">
-  {#each ['red', 'blue', 'green'] as color}
+  {#each ['red', 'blue', 'green', 'pink', 'purple', 'yellow', 'gray'] as color}
     <div class="color-column">
       <h3>{color}</h3>
       {#each [50, 100, 200, 300, 400, 500, 600, 700, 800, 900] as shade}
@@ -41,7 +41,7 @@ Each color in our system comes with a 10-step scale, from 50 (lightest) to 900 (
           class="color-swatch" 
           style="background-color: var(--{color}-{shade})"
         >
-          {shade}
+          {color}-{shade}
         </div>
       {/each}
     </div>
@@ -56,11 +56,19 @@ Each color in our system comes with a 10-step scale, from 50 (lightest) to 900 (
   margin: 2rem 0;
 }
 
+.color-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .color-swatch {
+  width: 100%;
   padding: 1rem;
   margin: 0.5rem 0;
   border-radius: 0.25rem;
   color: white;
   text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  border: 1px solid rgba(0,0,0,0.05);
 }
 </style> 

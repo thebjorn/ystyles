@@ -1,0 +1,30 @@
+// Progress bar component
+.progress {
+  display: inline-block;
+  width: 100%;
+  height: 1rem;
+  overflow: hidden;
+  background-color: var(--color-light);
+  border-radius: 0.25rem;
+
+  &-bar {
+    display: block;
+    height: 100%;
+    background-color: var(--color-primary);
+    transition: width 0.4s ease;
+
+    // Variants
+    &.bg-success {
+      background-color: var(--color-success);
+    }
+    &.bg-warning {
+      background-color: var(--color-warning);
+    }
+    &.bg-danger {
+      background-color: var(--color-danger);
+    }
+    &.bg-info {
+      background-color: var(--color-info);
+    }
+  }
+} 
