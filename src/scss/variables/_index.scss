@@ -1,7 +1,7 @@
 // Color System
-@import '../colors/red';
-@import '../colors/blue';
-@import '../colors/green';
+@use '../colors/red';
+@use '../colors/blue';
+@use '../colors/green';
 
 // Semantic color tokens
 $colors: (

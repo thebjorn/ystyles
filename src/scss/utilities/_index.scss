@@ -1,6 +1,6 @@
-@import 'spacing';
-@import 'typography';
-@import 'colors';
-@import 'display';
-@import 'flex';
-@import 'grid'; 
+@forward 'spacing';
+// @forward 'typography';
+// @forward 'colors';
+// @forward 'display';
+@forward 'flex';
+@forward 'grid'; 

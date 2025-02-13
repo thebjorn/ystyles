@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 // Margin and padding utilities
 @each $space-key, $space-value in $spacers {
   // Margin
