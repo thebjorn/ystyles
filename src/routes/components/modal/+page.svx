@@ -1,0 +1,77 @@
+---
+title: Modals
+---
+
+# Modal Component
+
+Modals (or dialog boxes) are used to show important content in a layer above the main page.
+
+## Usage
+
+```html
+<!-- Trigger button -->
+<button class="btn btn-primary" on:click="{openModal}">Open Modal</button>
+
+<!-- Modal structure -->
+<div class="modal {isActive ? 'is-active' : ''}">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5>Modal Title</h5>
+      <button class="close" on:click="{closeModal}">&times;</button>
+    </div>
+    <div class="modal-body">
+      Content of your modal goes here.
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" on:click="{closeModal}">Close</button>
+      <button class="btn btn-primary">Save changes</button>
+    </div>
+  </div>
+</div>
+```
+
+## Example
+
+<div class="component-preview">
+  <!-- Example is static here, but in a real Svelte environment you'd bind isActive to display/hide the modal. -->
+  <button class="btn btn-primary">Open Modal</button>
+  <div class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Modal Title</h5>
+        <button class="close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary">Close</button>
+        <button class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Variants
+
+- **Sizes**: `.modal-sm`, `.modal-lg`, etc.
+- **Animations**: Add classes like `.fade-in`, `.slide-up` for transitions.
+
+## Accessibility Notes
+
+- Use semantic markup: `<dialog>` or `<section role="dialog">` if possible.
+- Focus management: ensure focus goes to the modal when opened, and returns to the trigger when closed.
+- Keyboard navigation: support closing with the `Escape` key.
+
+```html
+<!-- Example with ARIA role and label -->
+<div class="modal" role="dialog" aria-labelledby="modalTitle" aria-modal="true">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 id="modalTitle">Modal Title</h5>
+      <button class="close" aria-label="Close">&times;</button>
+    </div>
+    ...
+  </div>
+</div>
+``` 

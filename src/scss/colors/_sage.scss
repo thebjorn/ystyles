@@ -1,0 +1,24 @@
+// Sage color scale (example subtle green-gray mix)
+$sage-50:  #f8faf9;
+$sage-100: #eef4f1;
+$sage-200: #dfe9e3;
+$sage-300: #cfded6;
+$sage-400: #bfcfca;
+$sage-500: #aebeb8;
+$sage-600: #8ea29d;
+$sage-700: #6e807d;
+$sage-800: #545f5c;
+$sage-900: #3a3f3e;
+
+:root {
+  --sage-50:  #{$sage-50};
+  --sage-100: #{$sage-100};
+  --sage-200: #{$sage-200};
+  --sage-300: #{$sage-300};
+  --sage-400: #{$sage-400};
+  --sage-500: #{$sage-500};
+  --sage-600: #{$sage-600};
+  --sage-700: #{$sage-700};
+  --sage-800: #{$sage-800};
+  --sage-900: #{$sage-900};
+} 

@@ -1,0 +1,24 @@
+// Crimson color scale
+$crimson-50:  #fff5f7;
+$crimson-100: #ffe4ea;
+$crimson-200: #fcbac3;
+$crimson-300: #f38f98;
+$crimson-400: #ec6977;
+$crimson-500: #e34252;
+$crimson-600: #cc3342;
+$crimson-700: #b32437;
+$crimson-800: #991b2e;
+$crimson-900: #7c1325;
+
+:root {
+  --crimson-50:  #{$crimson-50};
+  --crimson-100: #{$crimson-100};
+  --crimson-200: #{$crimson-200};
+  --crimson-300: #{$crimson-300};
+  --crimson-400: #{$crimson-400};
+  --crimson-500: #{$crimson-500};
+  --crimson-600: #{$crimson-600};
+  --crimson-700: #{$crimson-700};
+  --crimson-800: #{$crimson-800};
+  --crimson-900: #{$crimson-900};
+} 

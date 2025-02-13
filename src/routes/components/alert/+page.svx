@@ -1,0 +1,43 @@
+---
+title: Alerts
+---
+
+# Alert Component
+
+Provide contextual feedback messages for user actions.
+
+## Basic Usage
+
+```html
+<div class="alert alert-success">
+  Operation completed successfully
+</div>
+```
+
+## Examples
+
+<div class="component-preview">
+  <div class="alert alert-primary">
+    Primary alert with <a href="#">example link</a>
+  </div>
+  <div class="alert alert-danger alert-dismissible">
+    <span>Critical system error</span>
+    <button class="close">&times;</button>
+  </div>
+</div>
+
+## Variants
+
+### Dismissible
+```html
+<div class="alert alert-warning alert-dismissible">
+  Warning message
+  <button class="close">&times;</button>
+</div>
+```
+
+### Additional Colors
+```html
+<div class="alert alert-info">Informational</div>
+<div class="alert alert-light">Light variant</div>
+``` 

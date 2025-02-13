@@ -2,53 +2,79 @@
 title: Components
 ---
 
-# Components
+# Component Library
 
-Our framework provides a set of pre-built components that you can use to build your interfaces quickly and consistently.
+Browse our collection of pre-built, accessible components that work seamlessly with our theme system.
 
-## Buttons
+## Available Components
 
-Buttons are used to trigger actions or navigate between pages.
-
-```html
-<button class="btn btn-primary">Primary Button</button>
-<button class="btn btn-secondary">Secondary Button</button>
-```
-
-<div class="component-preview">
-  <button class="btn btn-primary">Primary Button</button>
-  <button class="btn btn-secondary">Secondary Button</button>
-</div>
-
-## Cards
-
-Cards are used to group related content and actions.
-
-```html
-<div class="card">
-  <div class="card-header">Card Title</div>
-  <div class="card-body">
-    Card content goes here.
-  </div>
-  <div class="card-footer">Card Footer</div>
-</div>
-```
-
-<div class="component-preview">
-  <div class="card">
-    <div class="card-header">Card Title</div>
-    <div class="card-body">
-      Card content goes here.
-    </div>
-    <div class="card-footer">Card Footer</div>
-  </div>
+<div class="component-grid">
+  <a href="/components/button" class="component-card">
+    <h3>Buttons</h3>
+    <p>Interactive elements for actions and links</p>
+  </a>
+  <a href="/components/card" class="component-card">
+    <h3>Cards</h3>
+    <p>Container for content and actions</p>
+  </a>
+  <a href="/components/alert" class="component-card">
+    <h3>Alerts</h3>
+    <p>Contextual feedback messages</p>
+  </a>
+  <a href="/components/modal" class="component-card">
+  <h3>Modal</h3>
+  <p>Display content above the page</p>
+</a>
+<a href="/components/navigation" class="component-card">
+  <h3>Navigation</h3>
+  <p>Menus, tabs, and pills</p>
+</a>
+<a href="/components/badge" class="component-card">
+  <h3>Badge</h3>
+  <p>Highlight counts or statuses</p>
+</a>
+<a href="/components/progress" class="component-card">
+  <h3>Progress Bars</h3>
+  <p>Track task completion</p>
+</a>
+<a href="/components/table" class="component-card">
+  <h3>Tables</h3>
+  <p>Structured data display</p>
+</a>
+<a href="/components/tooltip" class="component-card">
+  <h3>Tooltips</h3>
+  <p>Additional info on hover</p>
+</a>
+  <!-- Add other components following the same pattern -->
 </div>
 
 <style lang="scss">
-.component-preview {
-  padding: 2rem;
+.component-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.component-card {
+  padding: 1.5rem;
   border: 1px solid var(--color-light);
   border-radius: 0.5rem;
-  margin: 1rem 0;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: var(--text-color);
+    opacity: 0.8;
+  }
 }
 </style> 

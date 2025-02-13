@@ -1,0 +1,55 @@
+---
+title: Tooltips
+---
+
+# Tooltip Component
+
+Tooltips display additional information when hovering or focusing on an element.
+
+## Usage
+
+```html
+<span data-tooltip="This is a tooltip">Hover over me</span>
+```
+
+## Example
+
+<div class="component-preview">
+  <span data-tooltip="Hello, I'm a tooltip!">Hover or focus here</span>
+</div>
+
+## Variants
+
+### Positions
+
+```html
+<span data-tooltip="Tooltip on top" data-tooltip-position="top">
+  Hover me
+</span>
+
+<span data-tooltip="Tooltip on bottom" data-tooltip-position="bottom">
+  Hover me
+</span>
+```
+
+### With Icons
+
+```html
+<i class="icon-info" data-tooltip="Information icon tooltip"></i>
+```
+
+## Accessibility Notes
+
+- Use focusable elements so keyboard users can trigger the tooltip.
+- Provide `aria-describedby` if necessary for screen readers.
+- For advanced scenarios, consider using the [WAI-ARIA tooltip pattern](https://www.w3.org/TR/wai-aria-practices/#tooltip).
+
+```html
+<button 
+  aria-describedby="tooltip-1" 
+  data-tooltip="A helpful message" 
+  data-tooltip-position="top"
+>
+  Info
+</button>
+``` 

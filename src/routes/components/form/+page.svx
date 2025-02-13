@@ -1,0 +1,36 @@
+---
+title: Form Elements
+---
+
+# Form Components
+
+Styled form elements with validation states.
+
+## Example Form
+
+```html
+<div class="form-group">
+  <label class="form-label">Email address</label>
+  <input type="email" class="form-control">
+  <div class="invalid-feedback">Please provide a valid email</div>
+</div>
+```
+
+## Live Demo
+
+<div class="component-preview">
+  <form>
+    <div class="form-group">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control">
+    </div>
+    <button class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+## Validation States
+
+```html
+<input class="form-control is-invalid">
+<div class="invalid-feedback">Error message</div>
+``` 

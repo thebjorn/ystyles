@@ -1,0 +1,44 @@
+---
+title: Badges
+---
+
+# Badge Component
+
+Badges are used to highlight new or unread items, or to display counts and statuses.
+
+## Usage
+
+```html
+<span class="badge">Default Badge</span>
+<span class="badge badge-primary">Primary Badge</span>
+```
+
+## Example
+
+<div class="component-preview">
+  <span class="badge">Default</span>
+  <span class="badge badge-primary">Primary</span>
+  <span class="badge badge-success">Success</span>
+  <span class="badge badge-danger">Danger</span>
+</div>
+
+## Variants
+
+### Sizes
+```html
+<span class="badge badge-sm">Small Badge</span>
+<span class="badge badge-lg">Large Badge</span>
+```
+
+### With Icons
+```html
+<span class="badge badge-primary">
+  <i class="icon-user"></i> Profile
+</span>
+```
+
+## Accessibility Notes
+
+- [WAI-ARIA guidelines for badges](https://www.w3.org/TR/wai-aria-practices/) generally treat them as supplementary text.
+- Ensure color contrast between badge text and background.
+- If badges are interactive, consider using `<button>` or `<a>` elements instead of `<span>`. 

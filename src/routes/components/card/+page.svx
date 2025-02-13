@@ -1,0 +1,49 @@
+---
+title: Cards
+---
+
+# Card Component
+
+Cards provide flexible content containers with multiple variants.
+
+## Basic Usage
+
+```html
+<div class="card">
+  <div class="card-header">Featured</div>
+  <div class="card-body">
+    <h4>Card Title</h4>
+    <p>Card content goes here</p>
+  </div>
+  <div class="card-footer">Footer</div>
+</div>
+```
+
+## Examples
+
+<div class="component-preview">
+  <div class="card">
+    <div class="card-header">News Article</div>
+    <div class="card-body">
+      <h4>Breaking News</h4>
+      <p>Important update about our services</p>
+    </div>
+  </div>
+</div>
+
+## Variants
+
+### Colored Headers
+```html
+<div class="card card-primary">
+  <div class="card-header">Primary Card</div>
+  ...
+</div>
+```
+
+### Hover Effects
+```html
+<div class="card card-hover">
+  ...
+</div>
+``` 

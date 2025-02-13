@@ -1,0 +1,78 @@
+---
+title: Navigation
+---
+
+# Navigation Component
+
+Navigation elements (navbars, menus, tabs, pills) help users move through your site or application.
+
+## Usage
+
+```html
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Features</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Pricing</a>
+  </li>
+</ul>
+```
+
+## Example
+
+<div class="component-preview">
+  <ul class="nav">
+    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+  </ul>
+</div>
+
+## Variants
+
+### Tabs
+
+```html
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Tab 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Tab 2</a>
+  </li>
+</ul>
+```
+
+### Pills
+
+```html
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Pill 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Pill 2</a>
+  </li>
+</ul>
+```
+
+## Accessibility Notes
+
+- Use semantic elements: `<nav>` tag or `<ul>`/`<li>` if it's a list of links.
+- Use `aria-current="page"` or visually highlight the active link.
+- Ensure color contrast for active/inactive states.
+
+```html
+<nav aria-label="Main navigation">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="#">Home</a>
+    </li>
+    ...
+  </ul>
+</nav>
+``` 
