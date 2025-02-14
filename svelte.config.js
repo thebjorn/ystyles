@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-auto';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { sveltePreprocess } from 'svelte-preprocess';
+import { getContrastColor } from './src/lib/utils/color-contrast.js';
 import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 
@@ -7,7 +8,7 @@ import mdsvexConfig from './mdsvex.config.js';
 const config = {
     // Consult https://svelte.dev/docs/kit/integrations
     // for more information about preprocessors
-    extensions: ['.svelte', ...mdsvexConfig.extensions],
+    extensions: ['.svelte', '.md', '.svx', ...mdsvexConfig.extensions],
 
     kit: {
 		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
@@ -17,9 +18,25 @@ const config = {
 	},
 
     preprocess: [
-        vitePreprocess({
+        sveltePreprocess({
             scss: {
-                prependData: '@import "src/scss/main.scss";'
+                prependData: `
+                    @use "sass:color";
+                    @use "sass:list";
+                    @use "sass:map";
+                    @use "sass:meta";
+                    @use "sass:string";
+                    @use './src/scss/abstracts/mixins' as *;
+                    @use './src/scss/abstracts/functions' as *;
+
+                    $enable-on-colors: true; // Control the generation
+
+                    @function get-contrast-color($color) {
+                        @debug $color;
+                        @return meta.call(meta.get-function('getContrastColor', $module: 'js'), $color);
+                    }
+                    `,
+                renderSync: true,
             }
         }),
         mdsvex(mdsvexConfig)

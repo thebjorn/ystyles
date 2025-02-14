@@ -1,19 +1,7 @@
+@use 'sass:map';
+
 // Color System
-@use '../colors/red';
-@use '../colors/blue';
-@use '../colors/green';
-@use '../colors/yellow';
-@use '../colors/purple';
-@use '../colors/gray';
-@use '../colors/pink';
-@use '../colors/orange';
-@use '../colors/brown';
-@use '../colors/crimson';
-@use '../colors/indigo';
-@use '../colors/sage';
-@use '../colors/slate';
-@use '../colors/violet';
-@use '../colors/cyan';
+@use '../colors/colors';
 
 
 
@@ -53,3 +41,14 @@ $breakpoints: (
   'xl': 1200px,
   'xxl': 1400px
 ); 
+
+// Breakpoint mixin
+@mixin breakpoint($breakpoint) {
+    @if map.has-key($breakpoints, $breakpoint) {
+      @media (min-width: map.get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    } @else {
+      @warn "Invalid breakpoint: #{$breakpoint}.";
+    }
+  }
