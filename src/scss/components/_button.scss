@@ -23,12 +23,54 @@
 
   &-secondary {
     background-color: var(--color-secondary);
-    color: white;
+    color: var(--on-color-secondary);
     
     &:hover {
       background-color: var(--gray-600);
+      color: var(--on-gray-600);
     }
   }
+
+  &-success {
+    background-color: var(--color-success);
+    color: var(--on-color-success);
+    
+    &:hover {
+      background-color: var(--green-700);
+      color: var(--on-green-700);
+    }
+  }
+
+  &-warning {
+    background-color: var(--color-warning);
+    color: var(--on-color-warning);
+
+    &:hover {
+      background-color: var(--yellow-700);
+      color: var(--on-yellow-700);
+    }
+  }
+
+  &-danger {
+    background-color: var(--color-danger);
+    color: var(--on-color-danger);
+
+    &:hover {
+      background-color: var(--red-700);
+      color: var(--on-red-700);
+    }
+  }
+
+  &-info {
+    background-color: var(--color-info);
+    color: var(--on-color-info);
+
+    &:hover {
+      background-color: var(--cyan-700);
+      color: var(--on-cyan-700);
+    }
+  }
+  
 
   // Sizes
   &-sm {
@@ -43,7 +85,8 @@
 
   // States
   &:disabled {
-    opacity: 0.65;
+    color: var(--gray-500);
+    background-color: var(--gray-200);
     cursor: not-allowed;
   }
 } 

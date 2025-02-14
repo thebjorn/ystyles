@@ -1,1 +1,22 @@
-// Currently empty, but reserved for SCSS functions. 
+
+@function reverse($list) {
+    $reversed: ();
+    @for $i from length($list) through 1 {
+        $reversed: append($reversed, nth($list, $i));
+    }
+    @return $reversed;
+}
+
+@function get-contrast-color($color) {
+    @if (meta.type-of($color) != 'color') {
+        @error "Type Error: apca.get-contrast-color expects a color as argument but received #{meta.type-of($color)}. Please provide a valid color.";
+    }
+    @return recommend-text-color($color);
+}
+
+@function get-contrast-color-safe($color) {
+    @if (meta.type-of($color) != 'color') {
+        @error "Type Error: apca.get-contrast-color-safe expects a color as argument but received #{meta.type-of($color)}. Please provide a valid color.";
+    }
+    @return recommend-text-color-safe($color);
+}

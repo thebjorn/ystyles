@@ -2,38 +2,48 @@
 [data-theme="pony"] {
   /* Light Mode */
   --color-primary: var(--pink-500);
+  --on-color-primary: var(--on-pink-500);
   --color-secondary: var(--purple-500);
+  --on-color-secondary: var(--on-purple-500);
   --color-success: var(--green-600);
+  --on-color-success: var(--on-green-600);
   --color-warning: var(--yellow-600);
+  --on-color-warning: var(--on-yellow-600);
   --color-danger: var(--red-600);
+  --on-color-danger: var(--on-red-600);
   --color-info: var(--blue-600);
+  --on-color-info: var(--on-blue-600);
   --color-light: var(--gray-50);
+  --on-color-light: var(--on-gray-50);
   --color-dark: var(--gray-800);
+  --on-color-dark: var(--on-gray-800);
   
   --background-color: var(--pink-50);
   --text-color: var(--gray-900);
 
   /* Dark Mode */
-  &[data-mode="dark"] {
-    --color-primary: var(--pink-400);
-    --color-secondary: var(--purple-400);
-    --color-success: var(--green-400);
-    --color-warning: var(--yellow-400);
-    --color-danger: var(--red-400);
-    --color-info: var(--blue-400);
-    --color-light: var(--gray-700);
-    --color-dark: var(--gray-100);
+  // &[data-mode="dark"] {
+  //   --color-primary: var(--pink-400);
+  //   --color-secondary: var(--purple-400);
+  //   --color-success: var(--green-400);
+  //   --color-warning: var(--yellow-400);
+  //   --color-danger: var(--red-400);
+  //   --color-info: var(--blue-400);
+  //   --color-light: var(--gray-700);
+  //   --color-dark: var(--gray-100);
 
-    --background-color: var(--pink-900);
-    --text-color: var(--gray-100);
-  }
+  //   --background-color: var(--pink-900);
+  //   --text-color: var(--gray-100);
+  // }
 
   // Some playful accent styling
   .btn-primary {
     border-radius: 9999px;
     background-color: var(--color-primary);
+    color: var(--on-color-primary);
     &:hover {
       background-color: var(--pink-700);
+      color: var(--on-pink-700);
     }
   }
 } 

@@ -1,10 +1,12 @@
 @use '../abstracts/contrast' as *;
+@use '../abstracts/functions' as *;
 @use 'sass:list';
 
 $color-numbers: 50 100 200 300 400 500 600 700 800 900;
 
 
 @mixin define-color-scale($color-name, $color-scale) {
+    @debug $color-scale;
     @for $i from 1 through list.length($color-numbers) {
         --#{$color-name}-#{list.nth($color-numbers, $i)}: #{list.nth($color-scale, $i)};
         --on-#{$color-name}-#{list.nth($color-numbers, $i)}: #{recommend-text-color(list.nth($color-scale, $i))};
@@ -45,3 +47,22 @@ $yellow: ( #fffbeb, #fef3c7, #fde68a, #fcd34d, #fbbf24, #f59e0b, #d97706, #b4530
     @include define-color-scale('violet', $violet);
     @include define-color-scale('yellow', $yellow);
 } 
+
+[data-mode="dark"] {
+    // @include define-color-scale('blue', reverse($blue));
+    @include define-color-scale('blue', reverse($blue));
+    @include define-color-scale('brown', reverse($brown));
+    @include define-color-scale('crimson', reverse($crimson));
+    @include define-color-scale('cyan', reverse($cyan));
+    @include define-color-scale('gray', reverse($gray));
+    @include define-color-scale('green', reverse($green));
+    @include define-color-scale('indigo', reverse($indigo));
+    @include define-color-scale('orange', reverse($orange));
+    @include define-color-scale('pink', reverse($pink));
+    @include define-color-scale('purple', reverse($purple));
+    @include define-color-scale('red', reverse($red));
+    @include define-color-scale('sage', reverse($sage));
+    @include define-color-scale('slate', reverse($slate));
+    @include define-color-scale('violet', reverse($violet));
+    @include define-color-scale('yellow', reverse($yellow));
+}
